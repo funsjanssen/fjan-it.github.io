@@ -1,0 +1,154 @@
+---
+layout: default
+title: Azure Devops Checklist Extension
+description: Azure Devops Checklist Extension Getting Started
+permalink: /azdo-checklist/get-started
+---
+
+<div class="container py-5">
+  <h1>Getting Started with Azure DevOps Checklist Extension</h1>
+  <p>
+    Welcome to the Azure DevOps Checklist Extension! This guide will help you
+    get started with using the extension effectively.
+  </p>
+
+  <h2>Installation</h2>
+  <p>To install the Azure DevOps Checklist Extension, follow these steps:</p>
+  <ol>
+    <li>Open your Azure DevOps organization.</li>
+    <li>Navigate to the "Marketplace" section.</li>
+    <li>Search for "Azure DevOps Checklist Extension".</li>
+    <li>
+      Click on "Install" and follow the prompts to add it to your project.
+    </li>
+  </ol>
+
+  <h2>Configuration</h2>
+  <p>
+    After installation, you need to set up custom fields to store checklist
+    data. <strong>Note:</strong> You can only add custom fields to custom processes, not inherited system processes.
+  </p>
+
+  <h3>Step 1: Create or Use a Custom Process</h3>
+  <div class="alert alert-warning">
+    <h4>⚠️ Important</h4>
+    <p>You cannot modify system processes (Agile, Scrum, CMMI, Basic) directly. You need to create an inherited process to add custom fields.</p>
+  </div>
+  <ol>
+    <li>Navigate to your <strong>Organization Settings</strong> in Azure DevOps</li>
+    <li>Under "Boards", click on <strong>Process</strong></li>
+    <li>Find the system process your project currently uses (e.g., Agile, Scrum, CMMI, Basic)</li>
+    <li>Click the <strong>ellipsis (⋯) button</strong> next to the system process</li>
+    <li>Select <strong>"Create inherited process"</strong></li>
+    <li>Give it a name (e.g., "Custom Agile with Checklists")</li>
+    <li>Click <strong>"Create process"</strong></li>
+    <li>Go to your <strong>Project Settings</strong> → <strong>Project configuration</strong> → <strong>Process</strong> and change to your new inherited process</li>
+  </ol>
+
+  <h3>Step 2: Create Custom Fields for Checklists</h3>
+  <ol>
+    <li>In your inherited process, choose a work item type where you want to add checklists (e.g., User Story, Task, Bug)</li>
+    <li>Click <strong>"New field"</strong></li>
+    <li>
+      Configure the field:
+      <ul>
+        <li>
+          <strong>Name:</strong> Enter a descriptive name (e.g., "Definition of
+          Done Checklist", "Code Review Checklist")
+        </li>
+        <li><strong>Type:</strong> Select "Text (Multi line)"</li>
+        <li>
+          <strong>Description:</strong> Add a helpful description for your team (optional)
+        </li>
+      </ul>
+    </li>
+    <li>
+      Under <strong>"Layout"</strong>, create a new group:
+      <ul>
+        <li>Click "Create new group"</li>
+        <li>Name it something like "Checklists" or "Process Tracking"</li>
+      </ul>
+    </li>
+    <li>Click <strong>"Add field"</strong> to save</li>
+  </ol>
+
+  <h3>Step 3: Hide the Field from Standard View (Optional)</h3>
+  <p>
+    Since the extension will display the checklist in a user-friendly format,
+    you may want to hide the raw markdown field:
+  </p>
+  <ol>
+    <li>In the work item type layout, find your newly created field</li>
+    <li>Click the <strong>ellipsis (⋯) button</strong> next to the field</li>
+    <li>Select <strong>"Hide from layout"</strong></li>
+    <li>
+      The field will still store data but won't clutter the work item form
+    </li>
+  </ol>
+
+  <h3>Step 4: Extension Configuration</h3>
+  <p>After creating the custom fields, configure the extension by:</p>
+  <ul>
+    <li>Accessing the extension settings from the project settings menu</li>
+    <li>Mapping your custom fields to checklist templates</li>
+    <li>Creating reusable checklist templates for different scenarios</li>
+    <li>Applying multiple templates to the same work item type if needed</li>
+  </ul>
+
+  <h2>Usage</h2>
+  <p>To use the checklist feature:</p>
+  <ol>
+    <li>Create or open a work item where you want to add a checklist.</li>
+    <li>Select the checklist template you want to apply.</li>
+    <li>Add items to your checklist and track their progress.</li>
+  </ol>
+
+  <h2>Best Practices</h2>
+  <div class="alert alert-info">
+    <h4>💡 Pro Tips</h4>
+    <ul>
+      <li>
+        <strong>Naming Convention:</strong> Use descriptive field names like
+        "DoD Checklist" or "Security Review Checklist"
+      </li>
+      <li>
+        <strong>Multiple Checklists:</strong> Create separate fields for
+        different types of checklists (e.g., development, testing, deployment)
+      </li>
+      <li>
+        <strong>Team Alignment:</strong> Involve your team in defining checklist
+        templates to ensure adoption
+      </li>
+      <li>
+        <strong>Regular Review:</strong> Periodically review and update your
+        checklist templates based on team feedback
+      </li>
+    </ul>
+  </div>
+
+  <h2>Common Use Cases</h2>
+  <ul>
+    <li>
+      <strong>Definition of Done:</strong> Ensure all completion criteria are
+      met before marking items as done
+    </li>
+    <li>
+      <strong>Code Review Checklists:</strong> Standardize code review processes
+      across your team
+    </li>
+    <li>
+      <strong>Deployment Procedures:</strong> Track deployment steps and ensure
+      nothing is missed
+    </li>
+    <li>
+      <strong>Testing Protocols:</strong> Maintain consistent testing procedures
+      for different work item types
+    </li>
+  </ul>
+
+  <h2>Support</h2>
+  <p>
+    If you encounter any issues or have questions, please refer to our
+    documentation or contact support through the Azure DevOps Marketplace page.
+  </p>
+</div>
